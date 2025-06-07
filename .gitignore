@@ -1,0 +1,5 @@
+# 创建 .gitignore 文件
+"vector_store/" | Out-File -Encoding utf8 .gitignore
+"data_pdf/" | Out-File -Encoding utf8 .gitignore -Append
+".env" | Out-File -Encoding utf8 .gitignore -Append  # 可选：忽略环境文件
+"__pycache__/" | Out-File -Encoding utf8 .gitignore -Append
