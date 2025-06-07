@@ -17,6 +17,7 @@ import faiss
 import traceback
 from langchain.docstore import InMemoryDocstore
 from langchain_community.chat_models import ChatTongyi
+from pathlib import Path 
 
 #当时是用于解决stramlit的某个冲突问题
 torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)] 
