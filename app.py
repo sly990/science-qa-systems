@@ -51,19 +51,12 @@ PROMPTS = {
 # os.environ['HF_ENDPOINT'] = "https://hf-mirror.com"
 
 
-# ==== 动态获取项目根目录（关键修改）====
-BASE_DIR = Path(__file__).parent  # 获取当前文件（app.py）所在的目录，即项目根目录
+# 直接从当前工作目录出发找子目录/文件
+DATA_DIR = "data_pdf/merged_pdfs"  
+VECTOR_STORE_PATH = "vector_store.pkl"  
 
-# ==== 修改 DATA_DIR 和 VECTOR_STORE_PATH 为相对路径 ====
-# 数据目录：相对于项目根目录的 "data_pdf/merged_pdfs"
-DATA_DIR = BASE_DIR / "data_pdf/merged_pdfs"
-# 向量存储路径：相对于项目根目录的 "vector_store/vector_store.pkl"
-VECTOR_STORE_PATH = BASE_DIR / "vector_store/vector_store.pkl"
-
-# 将 Path 对象转换为字符串（供后续代码使用）
-DATA_DIR = str(DATA_DIR)
-VECTOR_STORE_PATH = str(VECTOR_STORE_PATH)
-
+ES_INDEX_NAME = "rag_docs"
+os.environ['HF_ENDPOINT'] = "https://hf-mirror.com"
 
 
 
